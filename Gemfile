@@ -16,6 +16,7 @@ gem "rack-canonical-host"
 gem "rails", "~> 5.2.0"
 gem "recipient_interceptor"
 gem "sassc-rails"
+gem "slim-rails"
 gem "sprockets", ">= 3.0.0"
 gem "title"
 gem "uglifier"
@@ -39,6 +40,7 @@ group :development, :test do
 end
 
 group :test do
+  gem "capybara-selenium"
   gem "formulaic"
   gem "launchy"
   gem "simplecov", require: false

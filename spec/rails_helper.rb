@@ -7,7 +7,6 @@ if Rails.env.production? || Rails.env.staging?
 end
 
 require "rspec/rails"
-require "paper_trail/frameworks/rspec"
 
 Dir[Rails.root.join("spec/support/**/*.rb")].sort.each { |file| require file }
 
