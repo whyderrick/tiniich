@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.find_or_create_by(email: "whyderrick@gmail.com") do |user|
+  user.assign_attributes(
+    first_name: "Derrick",
+    last_name: "Carr",
+    password: ENV.fetch("USER_PASSWORD", "password1"),
+  )
+end

@@ -1,2 +1,8 @@
-h1.title Tiniich
-h2.description Tell Derrick how you feel
+section.container
+  h1.page-title Help Derrick Reflect
+  p.content
+    = t(".context")
+  p.content
+    = t(".feedback").html_safe
+  div
+    = link_to t(".button"), new_reflection_path, class: "button is-primary"

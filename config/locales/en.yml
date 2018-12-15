@@ -1,33 +1,15 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  home:
+    show:
+      context: >-
+        Thanks for being a friend! I built this site as  a gift to myself on my 30th
+        birthday to reflect on who I am with the help of the people who know me.
+        After you click the button below, you'll land on a short survey I've
+        written. It should be about ten questions. By asking for ten answers from
+        each of you, I'm hoping to have a solid reflection of who I've been over the
+        past 30 years to inform who I'll strive to be in the next 30.
+      feedback: >-
+        I built this myself in far too little time. If you hit issues, want to
+        recommend ways to improve it or want to use it yourself, drop me a text or
+        an <a href="mailto:derrick@derrick.fyi">an email</a>.
+      button: Tell Derrick About Himself
