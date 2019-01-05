@@ -5,7 +5,7 @@ source "https://rubygems.org"
 #   "https://github.com/#{repo_name}.git"
 # end
 
-ruby "2.5.3"
+ruby "2.6.0"
 
 gem "autoprefixer-rails"
 gem "bulma-rails", "~> 0.7.2"
