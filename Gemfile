@@ -39,15 +39,15 @@ group :development, :test do
   gem "pry-byebug"
   gem "pry-rails"
   gem "rspec-rails"
+  gem "suspenders"
 end
 
 group :test do
   gem "capybara-selenium"
   gem "formulaic"
   gem "launchy"
+  gem "shoulda-matchers"
   gem "simplecov", require: false
   gem "timecop"
   gem "webmock"
 end
-
-gem "suspenders", group: [:development, :test]
