@@ -5,4 +5,4 @@ section.container
   p.content
     = t(".feedback").html_safe
   div
-    = link_to t(".button"), new_reflection_path, class: "button is-primary"
+    = link_to t(".button"), new_frame_reflection_path(Frame.first.id), class: "button is-primary"

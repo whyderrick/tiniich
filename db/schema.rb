@@ -10,26 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_06_000310) do
+ActiveRecord::Schema.define(version: 2019_01_06_005142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "questions", force: :cascade do |t|
-    t.string "text", null: false
-    t.string "field_type", null: false
-    t.bigint "reflection_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["reflection_id"], name: "index_questions_on_reflection_id"
-  end
-
-  create_table "reflections", force: :cascade do |t|
+  create_table "frames", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.boolean "accepting_responses", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_reflections_on_user_id"
+    t.index ["user_id"], name: "index_frames_on_user_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "text", null: false
+    t.string "field_type", null: false
+    t.bigint "frame_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["frame_id"], name: "index_questions_on_frame_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -45,6 +45,6 @@ ActiveRecord::Schema.define(version: 2019_01_06_000310) do
     t.index ["remember_token"], name: "index_users_on_remember_token"
   end
 
-  add_foreign_key "questions", "reflections"
-  add_foreign_key "reflections", "users"
+  add_foreign_key "frames", "users"
+  add_foreign_key "questions", "frames"
 end
