@@ -98,6 +98,11 @@ GEM
       activemodel
     erubi (1.7.1)
     execjs (2.7.0)
+    factory_bot (4.11.1)
+      activesupport (>= 3.0.0)
+    factory_bot_rails (4.11.1)
+      factory_bot (~> 4.11.1)
+      railties (>= 3.0.0)
     ffi (1.9.25)
     formulaic (0.4.0)
       activesupport
@@ -285,6 +290,7 @@ DEPENDENCIES
   capybara-selenium
   clearance
   dotenv-rails
+  factory_bot_rails
   formulaic
   honeybadger
   launchy

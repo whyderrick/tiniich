@@ -10,11 +10,14 @@ RSpec.describe "Visits home page" do
 
   context "and clicks the derrick button" do
     it "shows the form with questions" do
+      question = build(:question)
+      reflection = create(:reflection, questions: [question])
+
       visit root_path
 
       click_on I18n.t("home.show.button")
 
-      expect(page).to have_text "What is your name?"
+      expect(page).to have_text(question.text)
     end
   end
 end

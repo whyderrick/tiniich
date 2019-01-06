@@ -24,7 +24,6 @@ gem "title"
 gem "uglifier"
 gem "bootsnap", require: false
 
-
 group :development do
   gem "listen"
   gem "rack-mini-profiler", require: false
@@ -36,6 +35,7 @@ group :development, :test do
   gem "awesome_print"
   gem "bundler-audit", ">= 0.5.0", require: false
   gem "dotenv-rails"
+  gem "factory_bot_rails"
   gem "pry-byebug"
   gem "pry-rails"
   gem "rspec-rails"
